@@ -26,5 +26,5 @@ end
 
 def valid_phone_number?(phone)
  # !phone.split('-').join.split('(').join.split(')').join.split(' ').join.scan(/\d{10}/).empty?
- phone.split(/[\s()- ]/)
+ !phone.split(/[()- ]/).join.scan(/\d{10}/).empty?
 end
