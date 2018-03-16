@@ -25,6 +25,5 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
-  phone_num = phone.split('-')
-  puts phone_num
+  !phone.split('-').join.split('(').join.split(')').join.scan(/\d{10}/).empty?
 end
